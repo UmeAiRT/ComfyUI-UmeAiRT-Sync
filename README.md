@@ -1,9 +1,7 @@
 # ComfyUI-UmeAiRT-Workflows
 
-A collection of professional, high-quality workflows for **ComfyUI**.
+A collection of workflows for ComfyUI. Their goal is to provide the maximum functionality in the simplest and most user-friendly interface possible.
 All workflows are provided as **Embedded PNGs** (images containing the workflow metadata).
-
-**Author:** [UmeAiRT](https://civitai.com/user/UmeAiRT) (CivitAI)
 
 ## 📂 Content
 

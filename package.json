@@ -1,0 +1,20 @@
+{
+  "name": "ComfyUI-UmeAiRT-Sync",
+  "version": "1.0.0",
+  "description": "Automatic workflow synchronizer/loader for UmeAiRT Workflows (Flux, SDXL, WAN, etc.).",
+  "author": "UmeAiRT",
+  "license": "MIT",
+  "homepage": "https://github.com/UmeAiRT/ComfyUI-UmeAiRT-Sync",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UmeAiRT/ComfyUI-UmeAiRT-Sync.git"
+  },
+  "keywords": [
+    "comfyui",
+    "workflows",
+    "loader",
+    "sync",
+    "flux",
+    "sdxl"
+  ]
+}

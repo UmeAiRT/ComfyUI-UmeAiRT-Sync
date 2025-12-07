@@ -48,11 +48,13 @@ def check_and_update():
             remote_version = response.read().decode('utf-8').strip()
     except Exception as e:
         print(f"{CYAN}[UmeAiRT-Sync]{RESET}{RED} ⚠️ Could not check for updates (No internet?). Keeping current version.{RESET}")
+        print(f"############################################################")
         return
 
     # 4. Compare: If versions match, do nothing (fast startup)
     if current_version == remote_version and os.path.exists(dest_path):
         print(f"{CYAN}[UmeAiRT-Sync]{RESET}{GREEN} ✅ Workflows are up to date (v{current_version}).{RESET}")
+        print(f"############################################################")
         return
 
     # 5. If different, start update process
@@ -81,10 +83,11 @@ def check_and_update():
         # Cleanup zip
         os.remove(zip_path)
         print(f"{CYAN}[UmeAiRT-Sync]{RESET}{GREEN} ✨ Successfully updated to v{remote_version}!{RESET}")
+        print(f"############################################################")
 
     except Exception as e:
         print(f"{CYAN}[UmeAiRT-Sync]{RESET}{RED} ❌ Update failed: {e}{RESET}")
-    print(f"############################################################")
+        print(f"############################################################")
 
 # Run check at startup
 check_and_update()

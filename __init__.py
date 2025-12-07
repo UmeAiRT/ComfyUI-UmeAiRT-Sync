@@ -52,13 +52,13 @@ def check_and_update():
             pass
 
     # 3. Check remote version
-    print(f"[{CYAN}UmeAiRT-Sync{RESET}] 🔍 Checking for updates...")
+    print(f"[{CYAN}UmeAiRT-Sync{RESET}] 🔍 Checking for workflows updates...")
     
     try:
         with urllib.request.urlopen(VERSION_URL) as response:
             remote_version = response.read().decode('utf-8').strip()
     except Exception as e:
-        print(f"[{CYAN}UmeAiRT-Sync{RESET}] {RED}⚠️ Check failed (No internet?). Keeping v{current_version}.{RESET}")
+        print(f"[{CYAN}UmeAiRT-Sync{RESET}]{RED} ⚠️ Check failed (No internet?). Keeping v{current_version}.{RESET}")
         return
 
     # 4. Compare versions
@@ -90,10 +90,10 @@ def check_and_update():
         
         # Cleanup temporary zip
         os.remove(temp_zip_path)
-        print(f"[{CYAN}UmeAiRT-Sync{RESET}] {GREEN}✨ Successfully updated to v{remote_version}!{RESET}")
+        print(f"[{CYAN}UmeAiRT-Sync{RESET}]{GREEN} ✨ Successfully updated to v{remote_version}!{RESET}")
 
     except Exception as e:
-        print(f"[{CYAN}UmeAiRT-Sync{RESET}] {RED}❌ Update failed: {e}{RESET}")
+        print(f"[{CYAN}UmeAiRT-Sync{RESET}]{RED} ❌ Update failed: {e}{RESET}")
 
 # Execute synchronization logic on import
 check_and_update()
